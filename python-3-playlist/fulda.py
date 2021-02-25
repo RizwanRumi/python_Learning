@@ -23,7 +23,6 @@ def CheckSubstringFulda(input):
     return check
 
 
-
 def CheckFulda(strInput):
     res1 = CheckFuldaCharacter(strInput)
     res2 = CheckSubstringFulda(strInput)
@@ -31,13 +30,12 @@ def CheckFulda(strInput):
 
     if(res1 and res2):
         result = 2
-    elif(res1 == True and res2 == False):
+    elif(res1 and not(res2)):
         result = 1
     else:
         result = 0
 
     print(result)
-
 
 
 CheckFulda('somefxuxdxlxamm')
