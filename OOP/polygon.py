@@ -12,9 +12,3 @@ class Polygon:
     def get_height(self):
         return self.__height
 
-
-
-
-
-
-
