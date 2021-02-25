@@ -1,3 +1,4 @@
+"""
 class Car:
     pass
 
@@ -22,6 +23,18 @@ ford.color = 'green'
 
 print(ford.speed)
 print(ford.color)
+"""
 
+class Car:
+    def __init__(self, speed, color):
+        self.speed = speed
+        self.color = color
+        self.model = 'es5' # set default or static  value
 
+ford = Car(200, 'black')
+honda = Car(220, 'red')
+audi = Car(256, 'blue')
 
+print(ford.speed)
+print(ford.color)
+print(ford.model)
