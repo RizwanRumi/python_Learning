@@ -27,14 +27,31 @@ print(ford.color)
 
 class Car:
     def __init__(self, speed, color):
-        self.speed = speed
-        self.color = color
-        self.model = 'es5' # set default or static  value
+        # private modifier by __
+        self.__speed = speed
+        self.__color = color
 
-ford = Car(200, 'black')
+    # setter, getter method for speed and color
+    def set_speed(self, value):
+        self.__speed = value
+
+    def get_speed(self):
+        return self.__speed
+
+    def set_color(self, value):
+        self.__color = value
+
+    def get_color(self):
+        return self.__color
+
+
+ford = Car(200, 'red')
 honda = Car(220, 'red')
 audi = Car(256, 'blue')
 
-print(ford.speed)
-print(ford.color)
-print(ford.model)
+ford.set_speed(300)
+ford.set_color('black')
+
+print(ford.get_speed())
+print(ford.get_color())
+
