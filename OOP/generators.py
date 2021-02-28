@@ -33,3 +33,15 @@ print(next(x))
 print(next(x))
 print(next(x))
 #print(next(x))
+
+print("same example to implement with generators which is implemented by iterators\n")
+
+def list_iterator(list):
+    for i in list:
+        yield i
+
+a = [1, 2, 3, 6, 5, 4]
+mylist = list_iterator(a)
+
+for i in mylist:
+    print(i)
